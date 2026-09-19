@@ -416,6 +416,10 @@ a {
   color: var(--ivory);
 }
 
+.player__empty[hidden] {
+  display: none;
+}
+
 .player__empty-sub {
   font-family: var(--font-sans) !important;
   font-size: 11.5px !important;
