@@ -9,8 +9,8 @@
    ce fichier n'a besoin d'être modifié.
 ================================================================ */
 
-const VIDEO_URL = "";     // ex: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CLEM%26MARINNE_FILM_MARIAGE.mp4"
-const DOWNLOAD_URL = "";  // ex: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CLEM%26MARINNE_FILM_MARIAGE.mp4"
+const VIDEO_URL = "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CLEM%26MARINNE_FILM_MARIAGE.mp4";     // ex: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CLEM%26MARINNE_FILM_MARIAGE.mp4"
+const DOWNLOAD_URL = "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CLEM%26MARINNE_FILM_MARIAGE.mp4";  // ex: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CLEM%26MARINNE_FILM_MARIAGE.mp4"
 
 /* La porte d'entrée (mot de passe) est gérée par js/gate.js,
    partagé par toutes les pages du site. */
