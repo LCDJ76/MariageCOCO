@@ -409,15 +409,15 @@ a {
   pointer-events: none;
 }
 
+.player__empty[hidden] {
+  display: none;
+}
+
 .player__empty p {
   margin: 0;
   font-family: var(--font-display);
   font-size: 19px;
   color: var(--ivory);
-}
-
-.player__empty[hidden] {
-  display: none;
 }
 
 .player__empty-sub {
