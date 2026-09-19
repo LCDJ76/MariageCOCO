@@ -12,19 +12,54 @@
    image. Pour un mariage (souvent 50-300 photos), mieux vaut générer
    une vignette compressée par photo — voir HEBERGEMENT.md.
 
-   Les 6 entrées ci-dessous sont des EXEMPLES DE DÉMONSTRATION à
-   partir de votre photo fournie. Remplacez tout ce tableau par vos
-   vraies photos (idéalement hébergées sur Cloudflare R2 — voir
-   HEBERGEMENT.md à la racine du projet pour la marche à suivre).
+   Les photos ci-dessous pointent vers le bucket Cloudflare R2
+   (dossier CAPTURE_JPEG). thumb et full utilisent la même URL —
+   pas encore de vignettes compressées séparées (voir HEBERGEMENT.md
+   section 5 si la grille devient lente à charger sur mobile).
 ================================================================ */
 
 const PHOTOS = [
-  { thumb: "assets/images/galerie-demo/demo-1.jpg", full: "assets/images/galerie-demo/demo-1.jpg", alt: "Marine" },
-  { thumb: "assets/images/galerie-demo/demo-2.jpg", full: "assets/images/galerie-demo/demo-2.jpg", alt: "Clément" },
-  { thumb: "assets/images/galerie-demo/demo-4.jpg", full: "assets/images/galerie-demo/demo-4.jpg", alt: "Marine et Clément" },
-  { thumb: "assets/images/galerie-demo/demo-3.jpg", full: "assets/images/galerie-demo/demo-3.jpg", alt: "Détail" },
-  { thumb: "assets/images/galerie-demo/demo-5.jpg", full: "assets/images/galerie-demo/demo-5.jpg", alt: "Décoration florale" },
-  { thumb: "assets/images/galerie-demo/demo-6.jpg", full: "assets/images/galerie-demo/demo-6.jpg", alt: "Marine et Clément" }
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_0.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_0.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_1.png", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_1.png", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_2.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_2.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_3.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_3.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_4.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_4.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_5.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_5.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_6.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_6.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_7.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_7.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_8.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_8.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_9.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_9.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_10.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_10.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_11.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_11.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_12.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_12.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_13.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_13.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_14.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_14.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_15.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_15.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_16.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_16.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_17.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_17.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_18.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_18.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_19.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_19.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_20.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_20.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_21.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_21.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_23.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_23.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_24.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_24.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_25.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_25.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_26.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_26.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_27.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_27.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_28.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_28.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_29.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_29.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_30.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_30.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_31.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_31.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_32.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_32.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_33.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_33.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_34.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_34.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_36.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_36.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_37.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_37.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_38.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_38.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_39.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_39.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_40.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_40.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_41.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_41.jpg", alt: "" },
+  { thumb: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_42.jpg", full: "https://pub-58fa438746034f85a2370699f0b84a2d.r2.dev/CAPTURE_JPEG/CLEM%26MARINNE_42.jpg", alt: "" },
 ];
 
 /* ================================================================
